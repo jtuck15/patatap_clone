@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="paper-full.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js"></script>
+    <script type="text/paperscript" canvas='canvas'>
+
+var sound1 = new Howl({
+    src: ['sounds/bubbles.mp3'],
+});
+
+var sound2 = new Howl({
+    src: ['sounds/clay.mp3'],
+});
+
+var circles = [];
+
+function onKeyDown(event) {
+    sound.play();
+    var maxPoint = new Point (view.size.width, view.size.height);
+    var randomPoint = Point.random();
+    var point = maxPoint * randomPoint;
+    var newCircle = new Path.Circle(point, 500);
+    if(event.key === 'a') {
+        sound1.play();
+        newCircle.fillColor = 'blue';
+    }
+    newCircle.fillColor = 'orange';
+    circles.push(newCircle);
+};
+
+function onFrame(event) {
+    for(var i = 0; i < circles.length; i++){
+        circles[i].fillColor.hue += 1;
+        circles[i].scale(.9);
+    }
+}
+
+    
+    </script>
+    <title>Circles</title>
+</head>
+
+<body>
+
+<!-- How to loop through circles and display them across the page -->
+    <!-- for(var x = 25; x < 1500; x+=100) { for(var y=25; y < 1500; y+=100) { new Path.Circle(new Point(x, y),
+        10).fillColor='black' ; } } -->
+
+    <canvas id="canvas" resize></canvas>
+</body>
+
+</html>
