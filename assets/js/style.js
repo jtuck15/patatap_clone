@@ -1,13 +1,17 @@
 // Animate and remove h1 when a to z key is pressed and add fadeIn animation on canvas
 $("html").on("keydown", function (event) {
     if (event.which >= 65 && event.which <= 90) {
-        $("h1").css("display", "none");
+        $("h1").fadeOut();
         $(canvas).addClass("animated fadeIn");
     } else {
-        $("h1").css("display", "unset");
+        $("h1").fadeIn();
         $("h1").toggleClass("animated shake");
     }
 });
+
+// $!("html").on("keydown", function () {
+//     $("h1").fadeIn();
+// }
 
 // Animate h1 when hovered over
 $("h1").on("mouseenter", function () {
