@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="paper-full.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <script src="https://kit.fontawesome.com/c35dcd4268.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.core.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="assets/js/paper-full.js"></script>
     <script type="text/paperscript" canvas='canvas'>
 
 var keyData = {
@@ -194,18 +197,42 @@ function onFrame(event) {
     }
 }
 
+
+
     
     </script>
     <title>Circles</title>
 </head>
 
 <body>
+    <h1>Press any key, A to Z, and turn up speakers</h1>
 
 <!-- How to loop through circles and display them across the page -->
     <!-- for(var x = 25; x < 1500; x+=100) { for(var y=25; y < 1500; y+=100) { new Path.Circle(new Point(x, y),
         10).fillColor='black' ; } } -->
 
+        <!-- DEVELOPER PANEL HTML -->
+        <div class="social-panel-container">
+            <div class="social-panel">
+                <p>Created by
+                    <a target="_blank" href="http://jimmytuck.com">Jimmy Tuck</a></p>
+                <button class="close-btn"><i class="fa fa-times"></i></button>
+                <h4>Get in touch on</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jimmy-tuck/" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="floating-btn">
+            <i class="fas fa-code"></i>
+        </button>
+
     <canvas id="canvas" resize></canvas>
+    <script src="assets/js/style.js"></script>
 </body>
 
 </html>
