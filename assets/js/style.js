@@ -9,10 +9,6 @@ $("html").on("keydown", function (event) {
     }
 });
 
-// $!("html").on("keydown", function () {
-//     $("h1").fadeIn();
-// }
-
 // Animate h1 when hovered over
 $("h1").on("mouseenter", function () {
     $(this).addClass("animated bounceIn")
